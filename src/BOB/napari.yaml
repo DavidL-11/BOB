@@ -1,0 +1,23 @@
+name: BOB
+display_name: Bounding-box Oracle for Biomedicine
+contributions:
+  commands:
+    - id: BOB.napari_widget
+      python_name: BOB.napari.napari_widget:create_bob_widget
+      title: Create BOB Widget
+    - id: BOB.video_reader
+      python_name: BOB.napari.reader_extensions:napari_get_reader
+      title: Read video files
+    - id: BOB.image_reader
+      python_name: BOB.napari.reader_extensions:napari_get_reader
+      title: Read nifti image files
+  widgets:
+    - command: BOB.napari_widget
+      display_name: BOB
+  readers:
+    - command: BOB.video_reader
+      filename_patterns: ['*.mp4', '*.avi', '*.mov', '*.mkv']
+      accepts_directories: false
+    - command: BOB.image_reader
+      filename_patterns: [ '*.gz', '*.nii', '*.nii.gz', '*.nrrd']
+      accepts_directories: false

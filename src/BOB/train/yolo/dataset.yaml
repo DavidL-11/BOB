@@ -1,0 +1,37 @@
+# Dataset root directory relative to the yolo directory
+path: BOB_dataset_combined
+
+train: 'train'
+val: 'val'
+
+names:
+    0: Glottis
+    1: Left Vocal Cord
+    2: Right Vocal Cord
+    3: Lung
+    4: Polyp
+    5: Tool
+    6: Organ
+    7: Liver
+    8: Right Kidney
+    9: Spleen
+    10: Mitochondria
+    11: Aorta
+    12: Inferior Vena Cava
+    13: Pharynx
+    14: Fetal Head
+    15: Gallbladder
+    16: Esophagus
+    17: Stomach
+    18: Tooth
+    19: Left Kidney
+    20: Prostate/Uterus
+    21: Skin Lesion
+    22: Glioma
+    23: Optic Disc
+    24: Optic Cup
+    25: Nucleus
+    26: Heart Myocardium
+    27: Heart Left Ventricle
+    28: Heart Right Ventricle
+    29: Heart Atrium Left
