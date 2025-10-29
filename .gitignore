@@ -57,6 +57,5 @@ runs/*
 BOB_rfdetr
 /**/**old**
 *.pdf
-*.png
 *.jpg
 *.svg
