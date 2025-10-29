@@ -1,9 +1,12 @@
-## About
+## Bounding-box Oracle for Biomedicine (BOB)
 BOB (Bounding-box Oracle for Biomedicine) is a prompt generator designed to be used with the MedSAM2 model.
 It is trained on medical images, videos and 3D data to generate prompts for segmentation tasks.
 This class provides methods to generate different types of prompts and assign classes to them.
 For 3D images, it generates bounding boxes for every slice in the volume which then
 get de-duplicated using non-maximum suppression of the confidence scores for each class.
+We also provide a napari plugin for easy usage of BOB in an interactive environment.
+
+![BOB napari plugin screenshot](assets/BOB.png)
 
 ## Installation and Downloads
 
