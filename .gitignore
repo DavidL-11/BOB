@@ -54,8 +54,6 @@ DatasetExamples/
 weight/
 Images/
 runs/*
-src/segFM/BOB/src/BOB/train/dfine/model/dfine_runs/*
-src/segFM/BOB/ExampleImages/
 BOB_rfdetr
 /**/**old**
 *.pdf

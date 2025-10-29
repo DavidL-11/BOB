@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 # Define metrics and corresponding file paths
 metrics = ["mAP50", "mAP50-95", "bbox_loss"]
-base_path = "src/segFM/BOB/src/BOB/checkpoints/D-FINE-N/summary/"
+base_path = "src/BOB/checkpoints/D-FINE-N/summary/"
 
 # Create subplots (1 row, 3 columns)
 fig, axes = plt.subplots(1, 3, figsize=(18, 5))

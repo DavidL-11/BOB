@@ -10,7 +10,7 @@ get de-duplicated using non-maximum suppression of the confidence scores for eac
 You can install `BOB` via pip:
 
 ```bash
-pip install -e src/segFM/BOB
+pip install -e .
 ```
 
 Dependencies:
@@ -20,7 +20,7 @@ Dependencies:
 - MedVol
 - ultralytics
 
-For ease of use, you can also use the Makefile provided in the segFM root directory.
+For ease of use, you can also use the Makefile provided in the BOB root directory.
 Read the [main README](../../../README.md) for more information.
 
 Some example images from multiple datasets can be [downloaded from Google Drive here](https://drive.google.com/drive/folders/14b9zoYAizITFiuQ92DeSbv4t5dGpsVol?usp=drive_link).
@@ -30,7 +30,7 @@ Some example images from multiple datasets can be [downloaded from Google Drive 
 For video file support (MP4, AVI, MOV, MKV), install with the video extra:
 
 ```bash
-pip install -e "src/segFM/BOB[video]"
+pip install -e ".[video]"
 ```
 
 This installs imageio with ffmpeg support for reading video files. Videos are automatically converted to grayscale for processing.

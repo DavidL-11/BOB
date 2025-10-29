@@ -1,0 +1,9 @@
+[submodule "src/BOB/train/dfine/model"]
+	path = src/BOB/train/dfine/model
+	url = git@github.com:Peterande/D-FINE.git
+[submodule "src/BOB/predictors/MedSAM2"]
+	path = src/BOB/predictors/MedSAM2
+	url = git@github.com:bowang-lab/MedSAM2.git
+[submodule "src/BOB/predictors/sam2"]
+	path = src/BOB/predictors/sam2
+	url = git@github.com:facebookresearch/sam2.git

@@ -24,7 +24,7 @@ Requirements for training:
 To train the model, activate your conda environment for D-FINE and run the following command from the root directory of the project:
 
 ```bash
-python src/segFM/BOB/src/BOB/train/dfine/model/train.py -c src/segFM/BOB/src/BOB/train/dfine/dfine_hgnetv2_n_custom.yml --use-amp --seed=0 --output-dir="runs/detect/BOB_dfine"
+python src/BOB/train/dfine/model/train.py -c src/BOB/train/dfine/dfine_hgnetv2_n_custom.yml --use-amp --seed=0 --output-dir="runs/detect/BOB_dfine"
 ```
 
 To visualize the training process, you can use:
@@ -34,7 +34,7 @@ tensorboard --logdir ./runs/detect/BOB_dfine
 ```
 
 ### Modyfing Batch Size and Epochs
-If you want to modify the batch size, you can do so in the 'src/segFM/BOB/models/dfine/dfine_hgnetv2_n_custom.yml' file under the 'train_dataloader' section:
+If you want to modify the batch size, you can do so in the 'src/BOB/models/dfine/dfine_hgnetv2_n_custom.yml' file under the 'train_dataloader' section:
 
 ```yaml
 epochs: 150 # Change this value to your desired number of epochs
@@ -68,7 +68,7 @@ To perform inference with the trained model, you can use the dfine_inference.py 
 To export the trained model to ONNX format, you can use the `export_onnx.py` script.
 
 ```sh
-python src/segFM/BOB/src/BOB/train/dfine/model/tools/deployment/export_onnx.py --check -c src/segFM/BOB/src/BOB/train/dfine/dfine_hgnetv2_n_custom.yml -r runs/detect/BOB_dfine/best_stg2.pth
+python src/BOB/train/dfine/model/tools/deployment/export_onnx.py --check -c src/BOB/train/dfine/dfine_hgnetv2_n_custom.yml -r runs/detect/BOB_dfine/best_stg2.pth
 ```
 
 Be sure that `cmake` is installed on your system and `onnx` and `onnxruntime` are installed in your Python environment.

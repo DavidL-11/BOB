@@ -1,7 +1,7 @@
 task: detect
 mode: train
 model: yolo12n.pt
-data: /home/david/Documents/segFM/src/segFM/BOB/src/BOB/train/yolo/dataset.yaml
+data: src/BOB/train/yolo/dataset.yaml
 epochs: 150
 time: null
 patience: 10
@@ -102,4 +102,4 @@ auto_augment: randaugment
 erasing: 0.4
 cfg: null
 tracker: botsort.yaml
-save_dir: /home/david/Documents/segFM/runs/detect/BOB_Y12n
+save_dir: runs/detect/BOB_Y12n

@@ -238,11 +238,3 @@ class DFinePredictor(YOLOStylePredictor):
             self.draw([source], labels_tensor, boxes_tensor, scores_tensor)
 
         return results
-
-
-if __name__ == "__main__":
-    img_path = "/home/david/Documents/segFM/Datasets/BAGLS/test/0.png"
-    img = Image.open(img_path).convert("RGB").resize((512, 512))
-
-    predictor = DFinePredictor()
-    predictor.predict(img, show=True)

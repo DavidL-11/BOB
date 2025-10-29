@@ -227,10 +227,3 @@ class DFinePredictor(YOLOStylePredictor):
 
         return results
 
-
-if __name__ == "__main__":
-    img_path = "/home/david/Documents/segFM/Datasets/BAGLS/test/0.png"
-    img = Image.open(img_path).convert("RGB")
-
-    predictor = DFinePredictor()
-    predictor.predict(img, show=True)
