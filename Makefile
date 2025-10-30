@@ -49,8 +49,10 @@ BOB: torch_auto submodules
 	# Install MedSAM2 in .venv_med
 	.venv_med/bin/pip install -e src/BOB/predictors/MedSAM2
 	# Download the checkpoints src/BOB/predictors/MedSAM2/download.sh
+	chmod +x src/BOB/predictors/MedSAM2/download.sh
 	cd src/BOB/predictors/MedSAM2 && ./download.sh
 	# Download SAM2 checkpoints src/BOB/predictors/sam2/checkpoints/download_ckpts.sh
+	chmod +x src/BOB/predictors/sam2/checkpoints/download_ckpts.sh
 	cd src/BOB/predictors/sam2/checkpoints && ./download_ckpts.sh
 	@echo "BOB installation complete!"
 

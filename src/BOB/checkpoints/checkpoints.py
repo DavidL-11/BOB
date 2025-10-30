@@ -15,6 +15,7 @@ SAM2_base_cfg = "configs/sam2.1/sam2.1_hiera_b+.yaml"
 SAM2_large = "src/BOB/predictors/sam2/checkpoints/sam2.1_hiera_large.pt"
 SAM2_large_cfg = "configs/sam2.1/sam2.1_hiera_l.yaml"
 
+MedSAM_cfg = "configs/sam2.1_hiera_t512.yaml"
 MedSAM2_CT = "src/BOB/predictors/MedSAM2/checkpoints/MedSAM2_CTLesion.pt"
 MedSAM2_latest = "src/BOB/predictors/MedSAM2/checkpoints/MedSAM2_latest.pt"
 MedSAM2_Heart = "src/BOB/predictors/MedSAM2/checkpoints/MedSAM2_US_Heart.pt"

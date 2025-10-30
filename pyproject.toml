@@ -9,7 +9,7 @@ description = "Bounding-box Oracle for Biomedicine - A box prompt generation mod
 readme = "README.md"
 license = {text = "BSD-3-Clause"}
 authors = [
-    {name = "TODO", email = "anonymous"},
+    {name = "TODO", email = "anonymous@gmail.com"},
 ]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",

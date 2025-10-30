@@ -18,7 +18,7 @@ class MedSAM2Predictor3D:
     It is a stripped-down version of the segFM/predictors/medsam_3d.py file, adapted for BOB.
     """
 
-    def __init__(self, checkpoint=checkpoints.MedSAM2CT):
+    def __init__(self, checkpoint=checkpoints.MedSAM2_CT):
         self.checkpoint = checkpoint
         self.model_cfg = checkpoints.MedSAM_cfg
         self.device = utils.setup_device()

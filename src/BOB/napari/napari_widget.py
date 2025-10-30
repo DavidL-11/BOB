@@ -312,7 +312,7 @@ class PromptVisualizer(QWidget):
         model_layout.addWidget(QLabel("Segmentation Model:"))
         self.model_selector = QComboBox()
         self.model_selector.addItem("MedSAM2_latest", (checkpoints.MedSAM2_latest, checkpoints.MedSAM_cfg))
-        self.model_selector.addItem("MedSAM2_CTLesion", (checkpoints.MedSAM2CT, checkpoints.MedSAM_cfg))
+        self.model_selector.addItem("MedSAM2_CTLesion", (checkpoints.MedSAM2_CT, checkpoints.MedSAM_cfg))
         self.model_selector.addItem("MedSAM2_MRI_LiverLesion", (checkpoints.MedSAM2_Liver, checkpoints.MedSAM_cfg))
         self.model_selector.addItem("MedSAM2_US_Heart", (checkpoints.MedSAM2_Heart, checkpoints.MedSAM_cfg))
         self.model_selector.addItem("MedSAM2_2411", (checkpoints.MedSAM2_2411, checkpoints.MedSAM_cfg))
