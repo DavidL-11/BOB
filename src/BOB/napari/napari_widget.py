@@ -316,6 +316,7 @@ class PromptVisualizer(QWidget):
         self.model_selector.addItem("MedSAM2_MRI_LiverLesion", (checkpoints.MedSAM2_Liver, checkpoints.MedSAM_cfg))
         self.model_selector.addItem("MedSAM2_US_Heart", (checkpoints.MedSAM2_Heart, checkpoints.MedSAM_cfg))
         self.model_selector.addItem("MedSAM2_2411", (checkpoints.MedSAM2_2411, checkpoints.MedSAM_cfg))
+        self.model_selector.addItem("nnInteractive3D", ("nnInteractiveV1.0", None))
         self.model_selector.addItem("SAM2.1 Tiny", (checkpoints.SAM2_tiny, checkpoints.SAM2_tiny_cfg))
         self.model_selector.addItem("SAM2.1 Small", (checkpoints.SAM2_small, checkpoints.SAM2_small_cfg))
         self.model_selector.addItem("SAM2.1 Base+", (checkpoints.SAM2_base, checkpoints.SAM2_base_cfg))

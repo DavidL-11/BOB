@@ -7,3 +7,6 @@
 [submodule "src/BOB/predictors/sam2"]
 	path = src/BOB/predictors/sam2
 	url = git@github.com:facebookresearch/sam2.git
+[submodule "src/BOB/predictors/nnInteractive"]
+	path = src/BOB/predictors/nnInteractive
+	url = git@github.com:MIC-DKFZ/nnInteractive.git

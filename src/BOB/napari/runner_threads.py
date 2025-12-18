@@ -32,6 +32,11 @@ class SegmentationWorker(QObject):
                     self.progress.emit("Running Segmentation using MedSAM2Predictor3D...")
                     from BOB.predictors.medsam_3d import MedSAM2Predictor3D
                     predictor = MedSAM2Predictor3D(checkpoint=self.checkpoint)
+                elif self.config is None:
+                    # Use nnInteractivePredictor3D
+                    self.progress.emit("Running Segmentation using nnInteractivePredictor3D...")
+                    from BOB.predictors.nnInteractive_3d import nnInteractivePredictor3D
+                    predictor = nnInteractivePredictor3D()
                 else:
                     self.progress.emit("Running Segmentation using SAM2Predictor3D...")
                     from BOB.predictors.sam2_3d import SAM2Predictor3D
