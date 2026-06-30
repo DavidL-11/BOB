@@ -197,7 +197,7 @@ class BOB:
             dtype=object,
         )
 
-    def __box_prompt_2d__(self, img, conf, iou, max_det, dataset, plot_prompts=False, allowed_classes=None):
+    def __box_prompt_2d__(self, img: np.ndarray, conf: float, iou: float, max_det: int, dataset, plot_prompts:bool=False, allowed_classes:List[int]=None):
         """
         Generate bounding box prompts for a 2D image using YOLO.
         Args:

@@ -1,0 +1,78 @@
+cff-version: 1.2.0
+title: >-
+  GitHub Repository for BOB - The Bounding-Box Oracle for Biomedicine
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - family-names: Lurz
+    given-names: David
+    orcid: 'https://orcid.org/0009-0003-6526-5464'
+  - family-names: Neubig
+    given-names: Luisa
+    orcid: 'https://orcid.org/0000-0001-5202-7158'
+  - family-names: Kist
+    given-names: Andreas
+    orcid: 'https://orcid.org/0000-0003-3643-7776'
+identifiers:
+  - type: doi
+    value: 10.1007/978-3-658-51100-5_52
+    description: Paper DOI
+repository-code: 'https://github.com/DavidL-11/BOB'
+abstract: >-
+  A variety of interactive segmentation foundation models 
+  are available, achieving strong performance in various 
+  domains of medical image segmentation. Many of these models, 
+  such as MedSAM2, require input prompts in the form of 
+  point coordinates or boxes. This prompt creation, however, 
+  is a time-consuming and error-prone task. To address this, 
+  we propose BOB, the Bounding-box Oracle for Biomedicine. 
+  By training lightweight 2D object detection models on the 
+  bounding boxes of annotated medical segmentation datasets, 
+  it can generate box prompts for medical images, videos, 
+  and volumes, allowing faster prompt generation while still 
+  keeping a human-in-the-loop architecture. We trained 
+  YOLOv12n and D-FINE-N with 30 classes on around 50k diverse 
+  images across more than 10 modalities. An algorithm to 
+  cluster the prompts and filter by object and prompt quality 
+  ensures appropriate behavior in multi-dimensional images. 
+  By combining the generated prompts with a segmentation 
+  foundation model, we are able to quickly perform semantic 
+  and instance segmentation with optional human-in-the-loop. 
+  Compared to theoretically perfect box prompts generated 
+  from the ground truth, we could achieve around 90-110% mIoU 
+  performance across scenarios, rivaling state-of-the-art 
+  specialized deep neural networks. To allow prompt generation, 
+  visualization, interactive refinement, and subsequent 
+  segmentation of the prompts, we provide a napari plugin. 
+  Our code and full results are openly available at https://github.com/DavidL-11/BOB.
+date-released: '2026-03-12'
+preferred-citation:
+  authors:
+    - family-names: Lurz
+      given-names: David
+      orcid: 'https://orcid.org/0009-0003-6526-5464'
+    - family-names: Neubig
+      given-names: Luisa
+      orcid: 'https://orcid.org/0000-0001-5202-7158'
+    - family-names: Kist
+      given-names: Andreas
+      orcid: 'https://orcid.org/0000-0003-3643-7776'
+  title: >-
+    Adaptive Automatic Prompt Generation Assistant for Segmentation Foundation Models
+  date-released: '2026-03-12'
+  type: conference-paper
+  pages: 40--47
+  year: '2026'
+  isbn: 978-3-658-51100-5
+  collection-title: Bildverarbeitung für die Medizin 2026
+  conference:
+    name: Bildverarbeitung für die Medizin 2026
+    location: 'Lübeck, Germany'
+  publisher:
+    name: Springer Fachmedien Wiesbaden
+    address: Wiesbaden
+  identifiers:
+    - type: doi
+      value: 10.1007/978-3-658-51100-5_52
+
+  

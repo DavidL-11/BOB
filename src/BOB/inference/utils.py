@@ -168,7 +168,6 @@ def setup_device() -> torch.device:
         device = torch.device("mps")
     else:
         device = torch.device("cpu")
-    logger.info(f"Using device: {device}")
 
     if device.type == "cuda":
         # use bfloat16 for the entire notebook

@@ -41,7 +41,7 @@ class nnInteractivePredictor3D:
         self.session.initialize_from_trained_model_folder(model_path)
         
 
-    def predict(self, image, prompts):
+    def predict(self, image: np.ndarray, prompts: list):
         """
         Segment the image using the MedSAM2 model.
         Args:
@@ -79,18 +79,21 @@ class nnInteractivePredictor3D:
             for prompt in prompts:
                 box = prompt.box # (4, ) in xyxy format
                 z = prompt.z # Scalar value indicating the slice index
+                
                 # ATTENTION: nnInteractive has different bbox format than SAM
                 # BBOX_COORDINATES must be specified as [[x1, x2], [y1, y2], [z1, z2]] (half-open intervals).
-                
+                # Note: nnInteractive pre-trained models currently only support **2D bounding boxes**.
+                # This means that **one dimension must be [d, d+1]** to indicate a single slice.
                 box = np.array([
                     [box[0], box[2]],  # x1, x2
                     [box[1], box[3]],  # y1, y2
-                    [z, z + 1]         # z1, z2 (half-open interval)
+                    [z, z + 1]         # z1, z2
                 ])
                 
-                print(
+                logger.info(
                     f"Adding prompt for {label} at frame {prompt.z} with color {prompt.color}"
                 )
+                
                 # Add the prompts to the predictor
                 self.session.add_bbox_interaction(
                     bbox_coords=box,
@@ -102,6 +105,7 @@ class nnInteractivePredictor3D:
             # Transpose results from (x, y, z) back to (z, y, x) to match result_arrays format
             results_transposed = results.numpy().transpose(2, 1, 0)
             result_arrays[obj_id][results_transposed > 0] = obj_id
+            # Remove the boxes to prepare for the next object
             self.session.reset_interactions()
 
         logger.info("Segmentation completed.")

@@ -1,4 +1,14 @@
 ## Bounding-box Oracle for Biomedicine (BOB)
+Anki Lab, Department Artificial Intelligence in Biomedical Imaging (AIBE), University of Erlangen-Nürnberg (FAU), Germany
+
+[David Lurz](https://scholar.google.com/citations?user=u-vpuvwAAAAJ&hl=en),
+[Luisa Neubig](https://scholar.google.com/citations?user=MaIlWfYAAAAJ&hl=en),
+[Andreas Kist](https://scholar.google.com/citations?user=H8h7A44AAAAJ&hl=en)
+
+[[`Paper`](https://doi.org/10.1007/978-3-658-51100-5_52)]
+[[`BibTeX`](#bibtex)]
+[[`Anki Lab`](https://anki.xyz/)]
+
 BOB (Bounding-box Oracle for Biomedicine) is a prompt generator designed to be used with the MedSAM2 model.
 It is trained on medical images, videos and 3D data to generate prompts for segmentation tasks.
 This class provides methods to generate different types of prompts and assign classes to them,
@@ -87,6 +97,34 @@ The training data was sourced from the following datasets and collections.
 - [Medical Decathlon](http://medicaldecathlon.com/)
 
 
+## Citations
+### BibTex
+If you use BOB in your research, please cite the following paper:
+
+```BibTeX
+@InProceedings{lurz2026BOB,
+author="Lurz, David
+and Neubig, Luisa
+and Kist, Andreas",
+editor="Handels, Heinz
+and Breininger, Katharina
+and Deserno, Thomas
+and Maier, Andreas
+and Maier-Hein, Klaus
+and Palm, Christoph
+and Tolxdorff, Thomas",
+title="Adaptive Automatic Prompt Generation Assistant for Segmentation Foundation Models",
+booktitle="Bildverarbeitung f{\"u}r die Medizin 2026",
+year="2026",
+publisher="Springer Fachmedien Wiesbaden",
+address="Wiesbaden",
+pages="259--266",
+abstract="A variety of interactive segmentation foundation models are available, achieving strong performance in various domains of medical image segmentation. Many of these models, such as MedSAM2, require input prompts in the form of point coordinates or boxes. This prompt creation, however, is a time-consuming and error-prone task. To address this, we propose BOB, the Bounding-box Oracle for Biomedicine. By training lightweight 2D object detection models on the bounding boxes of annotated medical segmentation datasets, it can generate box prompts for medical images, videos, and volumes, allowing faster prompt generation while still keeping a human-in-the-loop architecture.  We trained YOLOv12n and D-FINE-N with 30 classes on around 50k diverse images across more than 10 modalities. An algorithm to cluster the prompts and filter by object and prompt quality ensures appropriate behavior in multi-dimensional images. By combining the generated prompts with a segmentation foundation model, we are able to quickly perform semantic and instance segmentation with optional human-in-the-loop. Compared to theoretically perfect box prompts generated from the ground truth, we could achieve around 90-110{\%} mIoU performance across scenarios, rivaling state-of-the-art specialized deep neural networks. To allow prompt generation, visualization, interactive refinement, and subsequent segmentation of the prompts, we provide a napari plugin. Our code and full results are openly available at https://github.com/DavidL-11/BOB.",
+isbn="978-3-658-51100-5"
+}
+```
+
+### References
 
 The following list of citations contains publications related to our work:
 
